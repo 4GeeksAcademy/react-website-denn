@@ -16,8 +16,9 @@ const Home = () => {
 		<div className="container-fluid px-0">
 			<Navbar />
 			<Jumbotron />
-			<div className="row ps-4" style={{gap:"15px", paddingBottom: "15px"}}>
+			<div className="row" style={{ margin: 0, paddingBottom: "15px" }}>
 				{cardContent.map(card => (
+				<div className="col-12 col-md-6 col-lg-3 justify-content-center d-flex">
 					<Card
 						key={card.id}
 						imagen={card.imagen}
@@ -25,6 +26,7 @@ const Home = () => {
 						description={card.description}
 						buttonLink={card.buttonLink}
 					/>
+				</div>
 				))}
 			</div> 
 
@@ -33,7 +35,7 @@ const Home = () => {
 			</div>
 
 		</div>
-	);
+			);
 };
 
-export default Home;
+			export default Home;
